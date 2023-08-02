@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tupian{
+            width: 400px;
+            height: 200px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+    </style>
+</head>
+<body style="display: flex; flex-direction: column;height: 100vh;">
+    <div style="width: 400px; height: 200px; overflow: hidden;display: flex; margin: 0 auto">
+        <ul style="width: 1600px; height:200px; display: flex;" id="ul">
+            <li>
+                <img src="https://xcm123456-1319371265.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230727224507.jpg" alt="", class="tupian">
+            </li>
+            <li>
+                <img src="https://xcm123456-1319371265.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230730005049.jpg" alt="", class="tupian">
+
+            </li>
+            <li>
+                <img src="https://xcm123456-1319371265.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230730005101.jpg" alt="", class="tupian">
+            </li>
+            <li>
+                <img src="https://xcm123456-1319371265.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230730005113.jpg" alt="", class="tupian">
+            </li>
+            <li>
+                <img src="https://xcm123456-1319371265.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230727224507.jpg" alt="", class="tupian">
+            </li>
+        </ul>
+    </div>
+    <div style="flex:2;">
+        <p style="text-indent: 2em;">大家好，我是小聪明，欢迎来到的我的个人博客，这是一个简单的博客网页，千里之行，始于足下。</p>
+        <p style="text-indent: 2em;">人生处处充满挑战,在未知的世间里面生存，在充满不确定性的未来，我们应该要砥砺前行，不畏困难。编程是一个有趣好玩的游戏，我这里把编程称为游戏，是因为它可以带来快乐，这不是多巴胺的奖励，这是属于内啡肽快乐。</p>
+        <p style="text-indent: 2em;">我喜欢编程，即使我现在还是一个小白中的小白，但是，我现在正在一步步大怪升级，我现在打到了，js这里了，用js来处理人机的交互了。等级是一步步升的，技术也是一步步变好的。</p>
+        <p style="text-indent: 2em;">《价值心法》里说到，请确保将你的时间和精力放在喜欢，擅长且复利的事情上面。永远不要说来不及，记住：种一棵树最好的时间是40年前，其次是现在，记住，不要给自己设限。</p>
+        <p style="text-indent: 2em;">关于进步，我这里有一个公式，（1+0.01）的365次方=37.78>1.</p>
+
+    </div>
+    <div style="flex:1;display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <p>世界上所有不懂的都可以问它</p>
+        <a href="http://www.baidu.com">友情链接</a>
+    </div>
+    <script>
+        var left = 0;
+        var timer;
+        run();
+        function run(){
+            if(left<=-1600){
+                left = 0;
+            }
+           document.getElementById("ul").style.marginLeft=left+"px";
+           var n=(left % 400==0)?n=1200:n=10;
+           left-=10;
+           timer=setTimeout(run,n) 
+        }
+    </script>
+</body>
+</html>
